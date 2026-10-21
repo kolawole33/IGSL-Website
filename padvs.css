@@ -1,0 +1,603 @@
+/* =========================================================
+   IGSL — PADVS
+   Participation and Digital Value System
+   Page-Specific Styles
+   ========================================================= */
+
+
+/* =========================================================
+   PADVS HERO
+   Uses the GLOBAL hero system from style.css
+========================================================= */
+
+.padvs-hero-name {
+    display: block;
+    color: var(--orange);
+}
+
+.padvs-hero-statement {
+    display: block;
+    max-width: 850px;
+    color: var(--text-white);
+    font-size: clamp(3rem, 6vw, 6.5rem);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+
+/* =========================================================
+   PADVS INTRODUCTION
+   Platform-led editorial architecture
+========================================================= */
+
+.padvs-intro {
+    padding: 120px 0;
+    background: var(--bg-main);
+}
+
+.padvs-intro-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(180px, 0.35fr)
+        minmax(0, 1fr);
+    gap: 80px;
+    align-items: start;
+}
+
+.padvs-intro-heading {
+    position: relative;
+    padding-top: 5px;
+}
+
+.padvs-intro-heading::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 3px;
+    margin-bottom: 26px;
+    background: var(--orange);
+}
+
+.padvs-intro-content {
+    max-width: 900px;
+    padding-left: 0;
+    border-left: 1px solid var(--border-light);
+    padding-left: 42px;
+}
+
+.padvs-intro-content p {
+    max-width: 900px;
+    margin: 0;
+    color: var(--text-dark);
+    font-size: clamp(1.65rem, 3vw, 2.6rem);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   PLATFORM CAPABILITIES
+   Two-column numbered system architecture
+   No boxes
+========================================================= */
+
+.padvs-capabilities {
+    padding: 120px 0;
+    background: var(--bg-soft);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.padvs-capabilities .capabilities-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    column-gap: 70px;
+    row-gap: 0;
+    background: transparent;
+    border: 0;
+    overflow: visible;
+    counter-reset: capability;
+}
+
+.padvs-capabilities .capability-card {
+    position: relative;
+    min-height: 105px;
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    align-items: center;
+    padding: 24px 0;
+    background: transparent;
+    border: 0;
+    border-top: 1px solid var(--border-medium);
+    border-radius: 0;
+    overflow: visible;
+    counter-increment: capability;
+    transition:
+        transform var(--transition),
+        border-color var(--transition);
+}
+
+.padvs-capabilities .capability-card::before {
+    content: counter(capability, decimal-leading-zero);
+    display: block;
+    color: var(--orange);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.padvs-capabilities .capability-card:nth-last-child(-n + 2) {
+    border-bottom: 1px solid var(--border-medium);
+}
+
+.padvs-capabilities .capability-card h3 {
+    position: relative;
+    z-index: 2;
+    max-width: none;
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.padvs-capabilities .capability-line {
+    display: none;
+}
+
+.padvs-capabilities .capability-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background: var(--orange);
+    border: 0;
+    opacity: 1;
+    transition: width var(--transition);
+}
+
+.padvs-capabilities .capability-card:hover {
+    transform: translateX(5px);
+    background: transparent;
+    box-shadow: none;
+    z-index: 2;
+    border-color: var(--orange-border);
+}
+
+.padvs-capabilities .capability-card:hover::after {
+    width: 42px;
+}
+
+
+/* =========================================================
+   DESIGNED FOR CONTROLLED PARTICIPATION
+   Image + editorial content architecture
+========================================================= */
+
+.padvs-controlled {
+    padding: 120px 0;
+    background: var(--bg-main);
+}
+
+.controlled-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+    align-items: center;
+    gap: 90px;
+}
+
+.controlled-image {
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    background: var(--bg-soft);
+    border: 1px solid var(--border-light);
+}
+
+.controlled-image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 45%;
+    height: 4px;
+    background: var(--orange);
+    z-index: 2;
+}
+
+.controlled-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.controlled-image:hover img {
+    transform: scale(1.025);
+}
+
+.controlled-content {
+    max-width: 620px;
+    padding-left: 20px;
+    border-left: 2px solid var(--orange-border);
+}
+
+.controlled-content .section-marker {
+    display: block;
+    margin-bottom: 28px;
+}
+
+.controlled-content p {
+    max-width: 580px;
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   PLATFORM + PROGRAMME
+   Inverted editorial rhythm
+========================================================= */
+
+.padvs-platform {
+    padding: 120px 0;
+    background: var(--bg-soft);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+    align-items: center;
+    gap: 90px;
+}
+
+.platform-copy {
+    max-width: 620px;
+    order: 1;
+}
+
+.platform-copy .section-marker {
+    display: block;
+    margin-bottom: 28px;
+}
+
+.platform-copy p {
+    max-width: 580px;
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.platform-image {
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    background: var(--bg-main);
+    border: 1px solid var(--border-light);
+    order: 2;
+}
+
+.platform-image::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 42px;
+    height: 42px;
+    border-top: 2px solid var(--orange);
+    border-left: 2px solid var(--orange);
+    pointer-events: none;
+}
+
+.platform-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.platform-image:hover img {
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   GHANA DEPLOYMENT
+   Strong closing programme architecture
+========================================================= */
+
+.padvs-ghana {
+    padding: 120px 0;
+    background: var(--bg-main);
+}
+
+.ghana-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(260px, 0.65fr)
+        minmax(0, 1.35fr);
+    gap: 90px;
+    align-items: start;
+}
+
+.ghana-heading {
+    position: sticky;
+    top: 120px;
+    padding-top: 4px;
+}
+
+.ghana-heading .section-marker {
+    display: block;
+    margin-bottom: 22px;
+}
+
+.ghana-heading h2 {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.ghana-heading h2::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: 28px;
+    background: var(--orange);
+}
+
+.ghana-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.ghana-image {
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+    background: var(--bg-soft);
+    border: 1px solid var(--border-light);
+}
+
+.ghana-image::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 35%;
+    height: 4px;
+    background: var(--orange);
+    z-index: 2;
+}
+
+.ghana-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.ghana-image:hover img {
+    transform: scale(1.025);
+}
+
+.ghana-content p {
+    max-width: 760px;
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .padvs-capabilities .capabilities-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        column-gap: 50px;
+    }
+
+    .controlled-grid,
+    .platform-grid {
+        gap: 55px;
+    }
+
+    .ghana-grid {
+        gap: 60px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .padvs-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .padvs-intro-content {
+        border-left: 0;
+        padding-left: 0;
+        padding-top: 28px;
+        border-top: 1px solid var(--border-light);
+    }
+
+    .controlled-grid,
+    .platform-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .platform-copy {
+        order: 2;
+    }
+
+    .platform-image {
+        order: 1;
+    }
+
+    .ghana-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .ghana-heading {
+        position: static;
+    }
+
+    .controlled-content {
+        padding-left: 0;
+        border-left: 0;
+        border-top: 2px solid var(--orange-border);
+        padding-top: 28px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 620px
+========================================================= */
+
+@media (max-width: 620px) {
+
+    .padvs-hero-statement {
+        font-size: clamp(2.7rem, 12vw, 4.3rem);
+    }
+
+    .padvs-intro,
+    .padvs-capabilities,
+    .padvs-controlled,
+    .padvs-platform,
+    .padvs-ghana {
+        padding: 85px 0;
+    }
+
+    .padvs-intro-content p {
+        font-size: 1.55rem;
+    }
+
+    .padvs-capabilities .capabilities-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .padvs-capabilities .capability-card {
+        min-height: 85px;
+        padding: 24px 0;
+        grid-template-columns: 50px 1fr;
+    }
+
+    .padvs-capabilities .capability-card:nth-last-child(-n + 2) {
+        border-bottom: 0;
+    }
+
+    .padvs-capabilities .capability-card:last-child {
+        border-bottom: 1px solid var(--border-medium);
+    }
+
+    .controlled-grid,
+    .platform-grid {
+        gap: 35px;
+    }
+
+    .controlled-image,
+    .platform-image {
+        min-height: 330px;
+    }
+
+    .controlled-image img,
+    .platform-image img {
+        height: 330px;
+    }
+
+    .ghana-image {
+        min-height: 330px;
+    }
+
+    .ghana-image img {
+        height: 330px;
+    }
+
+    .controlled-content {
+        padding-top: 24px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .padvs-hero-statement {
+        font-size: 2.55rem;
+    }
+
+    .padvs-capabilities .capability-card {
+        min-height: 75px;
+    }
+
+    .controlled-image,
+    .platform-image,
+    .ghana-image {
+        min-height: 280px;
+    }
+
+    .controlled-image img,
+    .platform-image img,
+    .ghana-image img {
+        height: 280px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .padvs-capabilities .capability-card,
+    .controlled-image img,
+    .platform-image img,
+    .ghana-image img {
+        transition: none;
+    }
+
+    .padvs-capabilities .capability-card:hover {
+        transform: none;
+    }
+
+    .controlled-image:hover img,
+    .platform-image:hover img,
+    .ghana-image:hover img {
+        transform: none;
+    }
+}

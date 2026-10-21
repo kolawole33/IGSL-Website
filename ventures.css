@@ -1,0 +1,833 @@
+
+/* =========================================================
+   IGSL — STRATEGIC VENTURES & AFFILIATES
+   ventures.css
+========================================================= */
+
+/* 01. PAGE BASE */
+.ventures-page {
+    background: var(--bg-main);
+    color: var(--text-main);
+    overflow: hidden;
+}
+
+.ventures-page img {
+    max-width: 100%;
+}
+
+/* 02. VENTURES HERO */
+.ventures-hero {
+    position: relative;
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--bg-dark);
+}
+
+.ventures-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+}
+
+.ventures-hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.ventures-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.91) 0%,
+        rgba(0, 0, 0, 0.73) 48%,
+        rgba(0, 0, 0, 0.38) 100%
+    );
+    pointer-events: none;
+}
+
+.ventures-hero-inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 88px;
+    padding-bottom: 88px;
+}
+
+.ventures-hero-content {
+    max-width: 720px;
+}
+
+.ventures-hero .section-marker,
+.matrix-content .section-marker,
+.ecosystem-heading .section-marker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.ventures-hero .section-marker {
+    margin-bottom: 24px;
+}
+
+.ventures-hero .section-marker span,
+.matrix-content .section-marker span,
+.ecosystem-heading .section-marker span {
+    width: 32px;
+    height: 1px;
+    flex: 0 0 32px;
+    background: var(--orange);
+}
+
+.ventures-hero .section-marker p,
+.matrix-content .section-marker p,
+.ecosystem-heading .section-marker p {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.ventures-hero .section-marker p {
+    color: var(--orange-light);
+}
+
+.ventures-hero h1 {
+    margin: 0;
+    max-width: 720px;
+    color: var(--text-white);
+    font-size: clamp(46px, 6vw, 76px);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.05em;
+}
+
+.ventures-hero h1 span {
+    display: inline;
+    color: var(--orange-light);
+}
+
+.ventures-hero-intro {
+    max-width: 650px;
+    margin: 28px 0 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+/* 03. IGS MATRIX GHANA */
+.matrix-section {
+    position: relative;
+    padding: 112px 0;
+    background: var(--bg-main);
+}
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    align-items: center;
+    gap: clamp(42px, 6vw, 82px);
+}
+
+.matrix-image {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+    border-radius: 3px;
+    background: var(--bg-soft);
+    box-shadow: var(--shadow-md);
+}
+
+.matrix-image::after {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    content: "";
+    pointer-events: none;
+}
+
+.matrix-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.matrix-image:hover img {
+    transform: scale(1.025);
+}
+
+.matrix-content {
+    max-width: 560px;
+}
+
+.matrix-content .section-marker p,
+.ecosystem-heading .section-marker p {
+    color: var(--orange);
+}
+
+.matrix-content h2 {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: clamp(40px, 5vw, 60px);
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+}
+
+.matrix-content h2 span {
+    display: block;
+    color: var(--text-dark);
+}
+
+.matrix-content > p {
+    max-width: 520px;
+    margin: 26px 0 0;
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* 04. WIDER VENTURE ECOSYSTEM */
+.venture-ecosystem {
+    position: relative;
+    padding: 108px 0 112px;
+    background: var(--bg-soft);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.ecosystem-heading {
+    max-width: 760px;
+    margin-bottom: 34px;
+}
+
+.ecosystem-heading h2 {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: clamp(40px, 5vw, 62px);
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+}
+
+.ecosystem-heading h2 span {
+    color: var(--text-dark);
+}
+
+.ecosystem-content {
+    max-width: 850px;
+    margin-bottom: 36px;
+}
+
+.ecosystem-content p {
+    max-width: 820px;
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+/* 05. VENTURE EXAMPLE SECTIONS */
+.venture-example {
+    width: 100%;
+}
+
+.venture-sports-section {
+    margin-top: 32px;
+}
+
+/* 06. MOYOURS SPORTS ACADEMY LTD */
+
+/* Match the IGS Matrix layout while retaining current heights */
+.venture-ecosystem .moyours-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    align-items: center;
+    gap: clamp(42px, 6vw, 82px);
+}
+
+/* Moyours image: same styling as IGS Matrix */
+.venture-ecosystem .moyours-image {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    border-radius: 3px;
+    background: var(--bg-soft);
+    box-shadow: var(--shadow-md);
+}
+
+.venture-ecosystem .moyours-image::after {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    content: "";
+    pointer-events: none;
+}
+
+.venture-ecosystem .moyours-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.venture-ecosystem .moyours-image:hover img {
+    transform: scale(1.025);
+}
+
+/* Moyours content: same alignment as IGS Matrix */
+.venture-ecosystem .moyours-content {
+    max-width: 560px;
+    min-width: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.venture-ecosystem .moyours-content .section-marker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.venture-ecosystem .moyours-content .section-marker span {
+    width: 32px;
+    height: 1px;
+    flex: 0 0 32px;
+    background: var(--orange);
+}
+
+.venture-ecosystem .moyours-content .section-marker p {
+    margin: 0;
+    color: var(--orange);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.venture-ecosystem .moyours-content h2 {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: clamp(40px, 5vw, 60px);
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+}
+
+.venture-ecosystem .moyours-content h2 span {
+    display: block;
+    color: var(--text-dark);
+}
+
+.venture-ecosystem .moyours-content > p {
+    max-width: 520px;
+    margin: 26px 0 0;
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.venture-ecosystem .moyours-learn-more {
+    margin-top: 26px;
+}
+
+/* 07. INSPIRED GLOBAL AGRICULTURAL SERVICES LTD */
+.agricultural-section {
+    margin-top: 58px;
+}
+
+/* Center the agricultural company heading */
+.agricultural-section-heading {
+    width: 100%;
+    margin: 0 0 28px;
+    padding: 0 0 20px;
+    border-bottom: 1px solid var(--border-light);
+    text-align: center;
+}
+
+.agricultural-section-heading h3 {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.035em;
+    text-align: center;
+}
+
+.agricultural-products {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+    margin-top: 0;
+    align-items: stretch;
+}
+
+/* Agricultural product cards */
+.agricultural-product-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-top: 3px solid var(--orange);
+    border-radius: 5px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.045);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.agricultural-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 36px rgba(0, 0, 0, 0.085);
+}
+
+/* Product images: show the entire image without cropping */
+.agricultural-product-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agricultural-product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.agricultural-product-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 27px 28px 30px;
+}
+
+.agricultural-product-content h4 {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 1.28rem;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: -0.02em;
+}
+
+.agricultural-product-content p {
+    margin: 15px 0 24px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.agricultural-enquire {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-top: auto;
+    padding: 12px 24px;
+    background: var(--orange);
+    color: #ffffff;
+    border: 1px solid var(--orange);
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.agricultural-enquire:hover,
+.agricultural-enquire:focus-visible {
+    background: var(--text-dark);
+    border-color: var(--text-dark);
+    color: #ffffff;
+}
+
+/* 08. CLOSING ECOSYSTEM STATEMENT */
+.venture-ecosystem .venture-ecosystem-note {
+    max-width: 900px;
+    margin-top: 42px;
+    padding-top: 26px;
+    border-top: 1px solid var(--border-light);
+}
+
+.venture-ecosystem .venture-ecosystem-note p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.96rem;
+    line-height: 1.8;
+}
+
+/* 09. FOOTER COMPATIBILITY */
+.site-footer {
+    position: relative;
+}
+
+/* 10. TABLET AND SMALL LAPTOP */
+@media (max-width: 1100px) {
+    .matrix-grid {
+        gap: 48px;
+    }
+
+    .matrix-image {
+        height: 420px;
+    }
+
+    .agricultural-product-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 900px) {
+    .ventures-hero {
+        min-height: 540px;
+    }
+
+    .ventures-hero-inner {
+        padding-top: 74px;
+        padding-bottom: 74px;
+    }
+
+    .ventures-hero-content {
+        max-width: 680px;
+    }
+
+    .matrix-section {
+        padding: 86px 0;
+    }
+
+    .matrix-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .matrix-image {
+        height: 390px;
+    }
+
+    .matrix-content {
+        max-width: 700px;
+    }
+
+    .venture-ecosystem {
+        padding: 86px 0;
+    }
+
+    .venture-ecosystem .venture-cards {
+        grid-template-columns: minmax(0, 760px);
+        gap: 20px;
+    }
+
+    .venture-ecosystem .venture-logo-wrap,
+    .venture-ecosystem .venture-placeholder {
+        min-height: 190px;
+        padding: 22px;
+    }
+
+    .venture-ecosystem .venture-logo {
+        max-width: 185px;
+        max-height: 145px;
+    }
+
+    .venture-ecosystem .venture-card-content {
+        padding: 24px;
+    }
+
+    /* Moyours: image above content on tablets */
+    .venture-ecosystem .moyours-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    .venture-ecosystem .moyours-image {
+        height: 360px;
+    }
+
+    .venture-ecosystem .moyours-content {
+        max-width: 700px;
+    }
+
+    .agricultural-section {
+        margin-top: 46px;
+    }
+
+    .agricultural-products {
+        gap: 20px;
+    }
+
+    .agricultural-product-image {
+        height: 230px;
+    }
+
+    .agricultural-product-content {
+        padding: 24px;
+    }
+}
+
+/* 11. MOBILE */
+@media (max-width: 620px) {
+    .ventures-hero {
+        min-height: 520px;
+    }
+
+    .ventures-hero-image img {
+        object-position: 60% center;
+    }
+
+    .ventures-hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.79) 100%
+        );
+    }
+
+    .ventures-hero-inner {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .ventures-hero .section-marker p,
+    .matrix-content .section-marker p,
+    .ecosystem-heading .section-marker p {
+        font-size: 9px;
+        letter-spacing: 0.13em;
+    }
+
+    .ventures-hero h1 {
+        font-size: clamp(42px, 11vw, 56px);
+        line-height: 1.04;
+    }
+
+    .ventures-hero h1 span {
+        display: block;
+    }
+
+    .ventures-hero-intro {
+        margin-top: 23px;
+        font-size: 15px;
+        line-height: 1.78;
+    }
+
+    .matrix-section {
+        padding: 70px 0;
+    }
+
+    .matrix-grid {
+        gap: 30px;
+    }
+
+    .matrix-image {
+        height: 300px;
+        border-radius: 3px;
+    }
+
+    .matrix-content h2 {
+        font-size: 42px;
+    }
+
+    .matrix-content > p {
+        margin-top: 20px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .venture-ecosystem {
+        padding: 70px 0;
+    }
+
+    .ecosystem-heading {
+        margin-bottom: 30px;
+    }
+
+    .ecosystem-heading h2 {
+        font-size: 42px;
+    }
+
+    .ecosystem-content {
+        margin-bottom: 28px;
+    }
+
+    .ecosystem-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .venture-sports-section {
+        margin-top: 24px;
+    }
+
+    .venture-ecosystem .moyours-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 26px;
+    }
+
+    .venture-ecosystem .moyours-image {
+        height: 280px;
+    }
+
+    .venture-ecosystem .moyours-content h2 {
+        font-size: 42px;
+    }
+
+    .venture-ecosystem .moyours-content .section-marker p {
+        font-size: 9px;
+        letter-spacing: 0.13em;
+    }
+
+    .venture-ecosystem .moyours-content > p {
+        margin-top: 20px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .venture-ecosystem .moyours-learn-more {
+        margin-top: 22px;
+    }
+
+    .venture-ecosystem .venture-card-content h3 {
+        font-size: 1.18rem;
+    }
+
+    .venture-ecosystem .venture-card-summary {
+        font-size: 0.93rem;
+        line-height: 1.78;
+    }
+
+    .agricultural-section {
+        margin-top: 40px;
+    }
+
+    .agricultural-section-heading {
+        margin-bottom: 22px;
+        padding-bottom: 17px;
+    }
+
+    .agricultural-section-heading h3 {
+        font-size: 27px;
+        line-height: 1.3;
+    }
+
+    .agricultural-products {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-top: 0;
+    }
+
+    .agricultural-product-image {
+        height: 250px;
+    }
+
+    .agricultural-product-content {
+        padding: 23px;
+    }
+
+    .agricultural-product-content h4 {
+        font-size: 1.18rem;
+    }
+
+    .agricultural-product-content p {
+        font-size: 0.93rem;
+        line-height: 1.78;
+    }
+
+    .venture-ecosystem .venture-ecosystem-note {
+        margin-top: 30px;
+        padding-top: 22px;
+    }
+
+    .venture-ecosystem .venture-ecosystem-note p {
+        font-size: 0.92rem;
+        line-height: 1.78;
+    }
+}
+
+/* 12. VERY SMALL PHONES */
+@media (max-width: 400px) {
+    .ventures-hero {
+        min-height: 500px;
+    }
+
+    .ventures-hero h1 {
+        font-size: 39px;
+    }
+
+    .ventures-hero .section-marker {
+        gap: 9px;
+    }
+
+    .matrix-image {
+        height: 260px;
+    }
+
+    .matrix-content h2,
+    .ecosystem-heading h2 {
+        font-size: 36px;
+    }
+
+    .venture-ecosystem .moyours-content h2 {
+        font-size: 36px;
+    }
+
+    .venture-ecosystem .venture-card-content,
+    .agricultural-product-content {
+        padding: 20px;
+    }
+
+    .agricultural-section-heading h3 {
+        font-size: 24px;
+    }
+
+    .agricultural-product-image {
+        height: 220px;
+    }
+}
+
+/* 13. REDUCED MOTION ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    .venture-ecosystem .venture-card,
+    .matrix-image img,
+    .venture-ecosystem .moyours-image img,
+    .agricultural-product-card,
+    .agricultural-enquire {
+        transition: none;
+    }
+
+    .venture-ecosystem .venture-card:hover,
+    .matrix-image:hover img,
+    .venture-ecosystem .moyours-image:hover img,
+    .agricultural-product-card:hover {
+        transform: none;
+    }
+}

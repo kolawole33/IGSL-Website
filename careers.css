@@ -1,0 +1,681 @@
+
+/* =========================================================
+   IGSL — CAREERS PAGE
+   careers.css
+
+   Layout improvements for the Careers page.
+   Corporate colours: orange, black and white.
+   Shared header, navigation and footer remain controlled
+   by the global style.css.
+========================================================= */
+
+
+/* =========================================================
+   01. CAREERS PAGE BASE
+========================================================= */
+
+:root {
+    --careers-orange: var(--orange, #ef5f01);
+    --careers-black: #0b0b0b;
+    --careers-white: #ffffff;
+    --careers-soft: #f8f8f7;
+    --careers-text: #242424;
+    --careers-muted: #666666;
+    --careers-border: #e6e6e6;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    width: 100%;
+}
+
+.careers-container {
+    width: min(92%, var(--container, 1240px));
+    margin-inline: auto;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   02. CAREERS HERO
+========================================================= */
+
+.careers-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    min-height: 550px;
+    padding: 90px 0;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    /* Keep the existing hero image unchanged */
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.60)
+        ),
+        url("images/careers/careers-hero.jpg")
+        center center / cover no-repeat;
+
+    color: var(--careers-white);
+}
+
+.careers-hero .careers-container {
+    position: relative;
+    z-index: 1;
+}
+
+.careers-hero .careers-eyebrow {
+    margin: 0 0 22px;
+    color: var(--careers-orange);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.6;
+}
+
+.careers-hero h1 {
+    max-width: 850px;
+    margin: 0;
+
+    color: var(--careers-white);
+    font-size: clamp(48px, 6.5vw, 82px);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+
+    overflow-wrap: break-word;
+}
+
+.careers-accent {
+    width: 72px;
+    height: 4px;
+    margin: 28px 0;
+
+    background: var(--careers-orange);
+}
+
+.careers-intro {
+    max-width: 720px;
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   03. CAREERS HERO ACTIONS
+========================================================= */
+
+.careers-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin-top: 32px;
+}
+
+.careers-button {
+    box-sizing: border-box;
+    min-height: 52px;
+    padding: 14px 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    border: 1px solid transparent;
+    border-radius: 0;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.careers-button span {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1;
+
+    transition: transform 0.25s ease;
+}
+
+.careers-button:hover span {
+    transform: translateX(3px);
+}
+
+.careers-button-primary {
+    background: var(--careers-orange);
+    border-color: var(--careers-orange);
+    color: var(--careers-white);
+}
+
+.careers-button-primary:hover {
+    background: var(--careers-white);
+    border-color: var(--careers-white);
+    color: var(--careers-black);
+}
+
+.careers-button-secondary {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.55);
+    color: var(--careers-white);
+}
+
+.careers-button-secondary:hover {
+    background: var(--careers-orange);
+    border-color: var(--careers-orange);
+    color: var(--careers-white);
+}
+
+.careers-button:focus-visible {
+    outline: 2px solid var(--careers-orange);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   04. APPLICATION SECTION LAYOUT
+========================================================= */
+
+.careers-application {
+    padding: 84px 0;
+    background: var(--careers-soft);
+    color: var(--careers-text);
+}
+
+.careers-application > .careers-container {
+    max-width: 1000px;
+}
+
+/* Heading and form are visually separated */
+
+.careers-application-heading {
+    max-width: 740px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.careers-application-heading .careers-eyebrow {
+    margin: 0 0 16px;
+    color: var(--careers-orange);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.6;
+}
+
+.careers-application-heading h2 {
+    max-width: 720px;
+    margin: 0 auto 18px;
+
+    color: var(--careers-black);
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+
+    overflow-wrap: break-word;
+}
+
+.careers-application-heading > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+
+    color: var(--careers-muted);
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   05. APPLICATION FORM CONTAINER
+========================================================= */
+
+.igsl-careers-form {
+    position: relative;
+    box-sizing: border-box;
+
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 44px;
+
+    background: var(--careers-white);
+    border: 1px solid var(--careers-border);
+    border-top: 4px solid var(--careers-orange);
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.035);
+}
+
+
+/* =========================================================
+   06. FORM GRID AND FIELDS
+========================================================= */
+
+.igsl-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 24px;
+}
+
+.igsl-form-field {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.igsl-form-field-full {
+    grid-column: 1 / -1;
+}
+
+.igsl-form-field label {
+    color: #171717;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.igsl-form-field label span {
+    color: var(--careers-orange);
+}
+
+.igsl-form-field input {
+    box-sizing: border-box;
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+    padding: 14px 15px;
+
+    border: 1px solid #dcdcdc;
+    border-radius: 0;
+
+    background: var(--careers-white);
+    color: var(--careers-text);
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.igsl-form-field input::placeholder {
+    color: #888888;
+    opacity: 1;
+}
+
+.igsl-form-field input:focus-visible {
+    outline: none;
+    border-color: var(--careers-orange);
+    box-shadow: 0 0 0 3px rgba(239, 95, 1, 0.12);
+}
+
+
+/* =========================================================
+   07. CV UPLOAD
+========================================================= */
+
+.igsl-form-field input[type="file"] {
+    min-height: 56px;
+    padding: 10px;
+
+    background: #fafafa;
+    cursor: pointer;
+}
+
+.igsl-form-field input[type="file"]::file-selector-button {
+    margin-right: 12px;
+    padding: 10px 14px;
+
+    border: 1px solid var(--careers-orange);
+    border-radius: 0;
+
+    background: var(--careers-orange);
+    color: var(--careers-white);
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.igsl-form-field input[type="file"]::file-selector-button:hover {
+    background: var(--careers-black);
+    border-color: var(--careers-black);
+}
+
+.igsl-form-help {
+    margin: 0;
+
+    color: var(--careers-muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.igsl-cv-filename {
+    margin: 0;
+
+    color: #555555;
+    font-size: 12px;
+    line-height: 1.7;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   08. FORM SUBMIT AND STATUS
+========================================================= */
+
+.igsl-form-submit {
+    margin-top: 30px;
+}
+
+.igsl-form-submit:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.igsl-form-privacy {
+    margin: 16px 0 0;
+
+    color: var(--careers-muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.igsl-form-status {
+    margin-top: 18px;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    overflow-wrap: anywhere;
+}
+
+.igsl-form-status:empty {
+    display: none;
+}
+
+.igsl-form-status.success {
+    padding: 13px 15px;
+
+    border-left: 3px solid #237a43;
+    background: #f0f8f2;
+    color: #176b35;
+}
+
+.igsl-form-status.error {
+    padding: 13px 15px;
+
+    border-left: 3px solid #b42318;
+    background: #fff4f2;
+    color: #b42318;
+}
+
+
+/* =========================================================
+   09. SPAM-PROTECTION FIELD
+========================================================= */
+
+.igsl-form-trap {
+    position: absolute;
+    left: -10000px;
+
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   10. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .careers-hero {
+        min-height: 500px;
+        padding: 76px 0;
+    }
+
+    .careers-application {
+        padding: 72px 0;
+    }
+
+    .igsl-careers-form {
+        padding: 36px;
+    }
+}
+
+
+/* =========================================================
+   11. RESPONSIVE — SMALL TABLET
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .careers-container {
+        width: 90%;
+    }
+
+    .careers-hero {
+        min-height: auto;
+        padding: 72px 0;
+    }
+
+    .careers-hero h1 {
+        font-size: clamp(44px, 8vw, 64px);
+    }
+
+    .careers-intro {
+        font-size: 15px;
+        line-height: 1.85;
+    }
+
+    .careers-application {
+        padding: 60px 0;
+    }
+
+    .careers-application-heading {
+        margin-bottom: 32px;
+    }
+
+    .igsl-careers-form {
+        padding: 30px 26px;
+    }
+}
+
+
+/* =========================================================
+   12. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .careers-container {
+        width: 90%;
+    }
+
+    .careers-hero {
+        padding: 60px 0;
+        background-position: center center;
+    }
+
+    .careers-hero .careers-eyebrow {
+        margin-bottom: 18px;
+        font-size: 10px;
+    }
+
+    .careers-hero h1 {
+        font-size: clamp(40px, 10.5vw, 54px);
+        line-height: 1.06;
+        letter-spacing: -0.04em;
+    }
+
+    .careers-accent {
+        width: 58px;
+        margin: 24px 0;
+    }
+
+    .careers-intro {
+        font-size: 14px;
+        line-height: 1.85;
+    }
+
+    .careers-actions {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 26px;
+    }
+
+    .careers-button {
+        width: 100%;
+        min-height: 50px;
+        padding: 13px 16px;
+    }
+
+    .careers-application {
+        padding: 48px 0;
+    }
+
+    .careers-application-heading {
+        margin-bottom: 28px;
+        text-align: left;
+    }
+
+    .careers-application-heading .careers-eyebrow {
+        margin-bottom: 14px;
+    }
+
+    .careers-application-heading h2 {
+        margin: 0 0 16px;
+        font-size: clamp(29px, 7.5vw, 37px);
+        line-height: 1.15;
+    }
+
+    .careers-application-heading > p:last-child {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .igsl-careers-form {
+        padding: 25px 20px;
+    }
+
+    .igsl-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .igsl-form-field-full {
+        grid-column: auto;
+    }
+
+    .igsl-form-field input {
+        min-height: 50px;
+        font-size: 16px;
+    }
+
+    .igsl-form-field input[type="file"] {
+        min-height: 56px;
+        font-size: 13px;
+    }
+
+    .igsl-form-field input[type="file"]::file-selector-button {
+        margin-right: 8px;
+        padding: 9px 10px;
+        font-size: 11px;
+    }
+
+    .igsl-form-help,
+    .igsl-cv-filename {
+        font-size: 11px;
+    }
+
+    .igsl-form-submit {
+        width: 100%;
+        margin-top: 26px;
+    }
+
+    .igsl-form-privacy {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   13. RESPONSIVE — VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .careers-hero {
+        padding: 52px 0;
+    }
+
+    .careers-hero h1 {
+        font-size: 38px;
+    }
+
+    .careers-intro {
+        font-size: 13px;
+    }
+
+    .careers-application-heading h2 {
+        font-size: 29px;
+    }
+
+    .igsl-careers-form {
+        padding: 22px 16px;
+    }
+}
+
+
+/* =========================================================
+   14. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .careers-button,
+    .careers-button span,
+    .igsl-form-field input,
+    .igsl-form-field input[type="file"]::file-selector-button {
+        transition: none;
+    }
+}

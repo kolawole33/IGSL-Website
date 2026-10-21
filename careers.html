@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Careers at Inspired Global Systems Limited."
+    >
+
+    <title>Careers | Inspired Global Systems Limited</title>
+
+    <!-- Global CSS first; Careers-specific CSS second -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="careers.css">
+</head>
+
+<body>
+
+    <!-- GLOBAL HEADER -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo" aria-label="IGSL Home">
+                <img
+                    src="images/igsl-logo.png"
+                    alt="Inspired Global Systems Limited"
+                    class="site-logo"
+                >
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="main-navigation"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav
+                class="main-nav"
+                id="main-navigation"
+                aria-label="Main navigation"
+            >
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="what-we-do.html">WHAT WE DO</a>
+
+                <!-- SOLUTIONS DROPDOWN -->
+                <div class="nav-dropdown">
+                    <a
+                        href="solutions.html"
+                        class="dropdown-trigger"
+                        aria-expanded="false"
+                    >
+                        SOLUTIONS &amp; PLATFORMS
+                        <span aria-hidden="true">+</span>
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <a href="saip.html">SAIP</a>
+                        <a href="padvs.html">PADVS</a>
+                    </div>
+                </div>
+
+                <a href="experience.html">EXPERIENCE</a>
+                <a href="ventures.html">VENTURES</a>
+                <a href="insights.html">INSIGHTS</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- CAREERS HERO -->
+        <section class="careers-hero">
+            <div class="careers-container">
+
+                <p class="careers-eyebrow">
+                    INSPIRED GLOBAL SYSTEMS LIMITED
+                </p>
+
+                <h1>Build With Us.</h1>
+
+                <div class="careers-accent"></div>
+
+                <p class="careers-intro">
+                    We bring together people from technology, engineering,
+                    data, programme management, finance, business and other
+                    specialist disciplines. IGSL offers opportunities to work
+                    on programmes where technology meets real institutional
+                    and operational challenges.
+                </p>
+
+                <div class="careers-actions">
+
+                    <a
+                        href="contact.html"
+                        class="careers-button careers-button-primary"
+                    >
+                        View Opportunities
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a
+                        href="#careers-application-form"
+                        class="careers-button careers-button-secondary"
+                    >
+                        Submit Your Profile
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CAREERS APPLICATION SECTION -->
+        <section
+            class="careers-application"
+            id="careers-application-form"
+            aria-labelledby="careers-form-heading"
+        >
+            <div class="careers-container">
+
+                <!-- APPLICATION INTRODUCTION -->
+                <div class="careers-application-heading">
+
+                    <p class="careers-eyebrow">
+                        CAREERS AT IGSL
+                    </p>
+
+                    <h2 id="careers-form-heading">
+                        Submit Your Professional Profile
+                    </h2>
+
+                    <p>
+                        Share your contact details and upload your CV
+                        for consideration for relevant opportunities.
+                    </p>
+
+                </div>
+
+
+                <!-- APPLICATION FORM -->
+                <form
+                    id="igsl-careers-form"
+                    class="igsl-careers-form"
+                    action="https://formspree.io/f/xaeqzpvz"
+                    method="POST"
+                    enctype="multipart/form-data"
+                >
+
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Careers Application - IGSL"
+                    >
+
+                    <!-- SPAM PROTECTION -->
+                    <div class="igsl-form-trap" aria-hidden="true">
+
+                        <label for="igsl-website">
+                            Leave this field empty
+                        </label>
+
+                        <input
+                            type="text"
+                            id="igsl-website"
+                            name="_gotcha"
+                            tabindex="-1"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <!-- FORM FIELDS -->
+                    <div class="igsl-form-grid">
+
+                        <!-- FULL NAME -->
+                        <div class="igsl-form-field">
+
+                            <label for="igsl-applicant-name">
+                                Full Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="igsl-applicant-name"
+                                name="full_name"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PHONE NUMBER -->
+                        <div class="igsl-form-field">
+
+                            <label for="igsl-applicant-phone">
+                                Phone Number <span>*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="igsl-applicant-phone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL ADDRESS -->
+                        <div class="igsl-form-field igsl-form-field-full">
+
+                            <label for="igsl-applicant-email">
+                                Email Address <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="igsl-applicant-email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- CV UPLOAD -->
+                        <div class="igsl-form-field igsl-form-field-full">
+
+                            <label for="igsl-applicant-cv">
+                                Upload CV <span>*</span>
+                            </label>
+
+                            <input
+                                type="file"
+                                id="igsl-applicant-cv"
+                                name="cv"
+                                accept=".pdf,.doc,.docx"
+                                required
+                            >
+
+                            <p class="igsl-form-help">
+                                Accepted formats: PDF, DOC and DOCX.
+                                Maximum file size: 5 MB.
+                            </p>
+
+                            <p
+                                id="igsl-cv-filename"
+                                class="igsl-cv-filename"
+                            >
+                                No file selected.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SUBMIT BUTTON -->
+                    <button
+                        type="submit"
+                        id="igsl-form-submit"
+                        class="careers-button careers-button-primary igsl-form-submit"
+                    >
+                        Submit Application
+                        <span aria-hidden="true">→</span>
+                    </button>
+
+
+                    <!-- PRIVACY NOTE -->
+                    <p class="igsl-form-privacy">
+                        Please ensure your contact details are correct
+                        and your CV is up to date.
+                    </p>
+
+
+                    <!-- FORM STATUS -->
+                    <div
+                        id="igsl-form-status"
+                        class="igsl-form-status"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-main">
+
+                <!-- FOOTER BRAND -->
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="logo footer-logo"
+                        aria-label="IGSL Home"
+                    >
+                        <img
+                            src="images/igsl-footer-logo.png"
+                            alt="Inspired Global Systems Limited"
+                            class="footer-site-logo"
+                        >
+                    </a>
+
+                    <p>
+                        Building Systems That Make Things Work.
+                    </p>
+
+                </div>
+
+
+                <!-- FOOTER NAVIGATION -->
+                <div class="footer-links">
+
+                    <div class="footer-column">
+
+                        <h4>Explore</h4>
+
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="what-we-do.html">What We Do</a>
+                        <a href="solutions.html">Solutions &amp; Platforms</a>
+                        <a href="experience.html">Experience</a>
+
+                    </div>
+
+
+                    <div class="footer-column">
+
+                        <h4>Company</h4>
+
+                        <a href="ventures.html">Ventures</a>
+                        <a href="insights.html">Insights</a>
+                        <a href="careers.html" aria-current="page">Careers</a>
+                        <a href="contact.html">Contact</a>
+
+                    </div>
+
+
+                    <div class="footer-column">
+
+                        <h4>Solutions</h4>
+
+                        <a href="saip.html">SAIP</a>
+                        <a href="padvs.html">PADVS</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER BOTTOM -->
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 Inspired Global Systems Limited.
+                    All rights reserved.
+                </p>
+
+                <div class="footer-meta">
+                    <span>Technology</span>
+                    <span>Infrastructure</span>
+                    <span>Data</span>
+                    <span>Programme Delivery</span>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- SHARED NAVIGATION JAVASCRIPT -->
+    <script src="script.js"></script>
+
+    <!-- CAREERS FORM JAVASCRIPT -->
+    <script src="careers-form.js"></script>
+
+</body>
+</html>

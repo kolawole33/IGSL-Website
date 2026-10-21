@@ -1,0 +1,330 @@
+/* =========================================================
+   IGSL — WHAT WE DO
+   Inspired Global Systems Limited
+   Corporate White Design System
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.what-we-do-hero {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.84) 0%,
+            rgba(0, 0, 0, 0.68) 42%,
+            rgba(0, 0, 0, 0.28) 100%
+        ),
+        url("images/what-we-do/what-we-do-hero.jpg")
+        center center / cover no-repeat;
+}
+
+.what-we-do-hero-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.what-we-do-hero-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.what-we-do-hero-content {
+    max-width: 780px;
+    padding: 100px 0;
+}
+
+.what-we-do-hero-content .eyebrow {
+    margin-bottom: 26px;
+}
+
+.what-we-do-hero-content h1 {
+    margin: 0;
+    color: var(--text-white);
+    font-size: clamp(3.2rem, 6vw, 5.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CAPABILITY SECTIONS
+========================================================= */
+
+.capability-section {
+    padding: 120px 0;
+    background: var(--bg-main);
+}
+
+.capability-section-soft {
+    background: var(--bg-soft);
+}
+
+.capability-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: 90px;
+}
+
+.capability-grid-reverse {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+}
+
+.capability-grid-reverse .capability-image {
+    order: 2;
+}
+
+.capability-grid-reverse .capability-content {
+    order: 1;
+}
+
+
+/* =========================================================
+   CAPABILITY IMAGES
+========================================================= */
+
+.capability-image {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-muted);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.capability-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.capability-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.capability-image:hover img {
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   CAPABILITY CONTENT
+========================================================= */
+
+.capability-content {
+    max-width: 600px;
+}
+
+.section-eyebrow {
+    margin: 0 0 22px;
+    color: var(--orange);
+    font-size: 0.72rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.capability-content h2 {
+    margin: 0 0 26px;
+    color: var(--text-dark);
+    font-size: clamp(2rem, 3.5vw, 3.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    font-weight: 600;
+}
+
+.capability-content p:not(.section-eyebrow) {
+    margin: 0;
+    max-width: 580px;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   LARGE TABLETS / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .what-we-do-hero {
+        min-height: 560px;
+    }
+
+    .what-we-do-hero-content {
+        max-width: 700px;
+    }
+
+    .capability-section {
+        padding: 100px 0;
+    }
+
+    .capability-grid,
+    .capability-grid-reverse {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+        gap: 60px;
+    }
+
+    .capability-content h2 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .what-we-do-hero {
+        min-height: 520px;
+    }
+
+    .what-we-do-hero-content {
+        padding: 80px 0;
+    }
+
+    .what-we-do-hero-content h1 {
+        font-size: clamp(3rem, 8vw, 4.8rem);
+    }
+
+    .capability-section {
+        padding: 90px 0;
+    }
+
+    .capability-grid,
+    .capability-grid-reverse {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .capability-grid-reverse .capability-image {
+        order: 1;
+    }
+
+    .capability-grid-reverse .capability-content {
+        order: 2;
+    }
+
+    .capability-image img {
+        aspect-ratio: 16 / 9;
+    }
+
+    .capability-content {
+        max-width: 720px;
+    }
+
+    .capability-content h2 {
+        font-size: 2.6rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+
+    .what-we-do-hero {
+        min-height: 470px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.86) 0%,
+                rgba(0, 0, 0, 0.68) 100%
+            ),
+            url("images/what-we-do/what-we-do-hero.jpg")
+            center center / cover no-repeat;
+    }
+
+    .what-we-do-hero-content {
+        padding: 70px 0;
+    }
+
+    .what-we-do-hero-content .eyebrow {
+        margin-bottom: 20px;
+    }
+
+    .what-we-do-hero-content h1 {
+        font-size: clamp(2.7rem, 12vw, 4rem);
+        line-height: 1;
+    }
+
+    .capability-section {
+        padding: 72px 0;
+    }
+
+    .capability-grid,
+    .capability-grid-reverse {
+        gap: 36px;
+    }
+
+    .capability-image {
+        border-radius: var(--radius-md);
+    }
+
+    .capability-content h2 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+
+    .capability-content p:not(.section-eyebrow) {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .what-we-do-hero {
+        min-height: 430px;
+    }
+
+    .what-we-do-hero-content {
+        padding: 60px 0;
+    }
+
+    .what-we-do-hero-content h1 {
+        font-size: 2.55rem;
+    }
+
+    .capability-section {
+        padding: 64px 0;
+    }
+
+    .capability-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .capability-content p:not(.section-eyebrow) {
+        font-size: 0.92rem;
+    }
+}
